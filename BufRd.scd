@@ -34,20 +34,3 @@ SynthDef.new(\buf, {
 )
 
 
-/*
-(
-x = Synth.new(\buf,
-	               [
-		            \mute, 0.15,
-		            \trig, 0,
-		            \buffer, ~rec[2]
-                   ]
-);
-)
-
-~rec[2].numFrames;
-x.set(\loop, 1);
-x.set(\startFactor, 400000);
-x.set(\cut, 1000);
-
-/*
