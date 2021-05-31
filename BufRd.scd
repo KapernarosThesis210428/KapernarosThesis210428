@@ -63,7 +63,7 @@ SynthDef.new(\buf, {
 
   SynthDef.new(\echoes, {
   var input, effect;
-  input = In.ar(\inBus.ar(0), 2);
+  input = In.ar(\inBus.kr(0), 2);
   effect = AllpassC.ar(input,\maxDel.ir(2),\del.kr(0.2),\dec.kr(1), \mute.kr(1), 0);
   input = input.blend(effect, \merge.kr(1/2));
   Out.ar(\outBus.ir(0), input);
